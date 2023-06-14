@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-def add_attribute(*args):
-    if "main" in str(type(args[0])):
-        setattr(args[0], args[1], args[2])
+def add_attribute(obj, a, v):
+    res = getattr(obj, "__doc__", None)
+    if res is None:
+        setattr(obj, a, v)
     else:
         raise TypeError("can't add new attribute")
