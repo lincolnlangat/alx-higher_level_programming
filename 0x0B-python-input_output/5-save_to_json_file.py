@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-''' function that returns the JSON representation of an object (string)
-'''
-
 import json
 
 
-def to_json_string(my_obj):
-    ''' module to_json_strin
-     returns JSON representation
-    '''
-    return json.dumps(my_obj)
+def save_to_json_file(my_obj, filename):
+    with open(filename, mode="w", encoding="utf-8") as fd:
+        fd.write(json.dumps(my_obj))

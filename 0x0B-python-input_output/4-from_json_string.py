@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-function that appends a string at the end of a text file (UTF8) and returns the number of characters added
-"""
+import json
 
-def append_write(filename="", text=""):
-    with open(filename, 'a') as f:
-        return f.write(text)
+
+def from_json_string(my_str):
+    return json.loads(my_str)
